@@ -22,6 +22,8 @@ fs.readdir(dirImages, (err, arquivos) => {
     return;
   }
 
+  console.log("Removendo imagens não listadas...");
+
   arquivos.forEach((arquivo) => {
     if (!currentImages.has(arquivo)) {
       const imagePath = path.join(dirImages, arquivo);

@@ -44,6 +44,8 @@ const synchronizeImages = (imagem) => {
   });
 };
 
+console.log("Transferindo imagens...");
+
 imagesToTransfer.forEach((imagem) => {
   synchronizeImages(imagem);
 });
