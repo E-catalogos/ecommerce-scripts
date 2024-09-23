@@ -24,12 +24,9 @@ const imagesToTransfer = fs
 
 const synchronizeImages = (imagem) => {
   // Use esse trecho caso precise tranferir imagens de outro servidor
-  // const caminhoRemoto = `${remoteServer}:${path.join(
-  //   dirRemoteImages,
-  //   imagem
-  // )}`;
+  const caminhoRemoto = `${remoteServer}:${path.join(dirRemoteImages, imagem)}`;
 
-  const caminhoRemoto = `${path.join(dirRemoteImages, imagem)}`;
+  // const caminhoRemoto = `${path.join(dirRemoteImages, imagem)}`;
 
   const comando = `rsync -avz --progress ${caminhoRemoto} ${dirLocalImages}`;
 
